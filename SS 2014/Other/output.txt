@@ -1,0 +1,1 @@
+211 75293 62306 97252 84532 53798 91332 88301 98293 62316 57Student with the highest grade has the id 301 and the grade 98Student with the lowest grade has the id 532 and the grade 53Average class grade is 76.00
