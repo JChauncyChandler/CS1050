@@ -26,40 +26,40 @@ int main()
 
 	//Ask for input
 	printf("Enter the size of the input: ");
-		//scan input
+	//scan input
+	scanf("%d", &input);
+	//run check_input function
+	checkin = check_input(input);
+	//While loop to check for correct input
+	while(checkin == 0)
+	{
+		//ask user for input again
+		printf("Invalid input, enter the input again: ");
+		//Scan input again
 		scanf("%d", &input);
-			//run check_input function
-			checkin = check_input(input);
-				//While loop to check for correct input
-				while(checkin == 0)
-					{
-						//ask user for input again
-						printf("Invalid input, enter the input again: ");
-							//Scan input again
-							scanf("%d", &input);
-								//recheck input
-								checkin = check_input(input);
-					}
+		//recheck input
+		checkin = check_input(input);
+	}
 	initialize_array(array1, input);
 	initialize_array(array2, input);
 	//Open display menu function
 	display_menu();
-		//scan choice
+	//scan choice
+	scanf("%d", &choice);
+	//check for correct option
+	checkopt = check_option(choice);
+	//While to check for correct response
+	while(checkopt == 0)
+	{
+		//Reneter choice
+		printf("Invalid choice, enter again: ");
+		//rescan
 		scanf("%d", &choice);
-			//check for correct option
-			checkopt = check_option(choice);
-				//While to check for correct response
-				while(checkopt == 0)
-					{
-						//Reneter choice
-						printf("Invalid choice, enter again: ");
-							//rescan
-							scanf("%d", &choice);
-								//Call check function
-								checkopt = check_option(choice);
-					}
-			print_array(array1, input);
-                        print_array(array2, input);
+		//Call check function
+		checkopt = check_option(choice);
+	}
+	print_array(array1, input);
+        print_array(array2, input);
 
 	switch(choice)
 	{
